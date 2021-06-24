@@ -1,0 +1,53 @@
+.image-slider {
+  padding: 30px 0px 70px 0px;
+  // .image-slider__wrapper
+
+  &__wrapper {
+  }
+
+  // .image-slider__slide
+
+  &__slide {
+  }
+
+  // .image-slider__image
+
+  &__image {
+    text-align: center;
+  }
+
+  &__image img {
+    max-width: 100%;
+  }
+
+  // Стрелки
+  & .swiper-button-prev::after,
+  & .swiper-button-next::after {
+    color: #fff;
+    font-size: 30px;
+  }
+  //Пагинация
+  & .swiper-pagination {
+    bottom: 0;
+  }
+  //Буллеты
+  & .swiper-pagination-bullet {
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    font-size: 14px;
+    background-color: #fff;
+  }
+}
+
+.image-slider__bg-1 {
+  // background: #000 url('/img/history/01.jpg') center / cover no-repeat;
+}
+
+.image-slider__bg-2 {
+  // background: #000 url('/img/history/02.jpg') center / cover no-repeat;
+}
+
+.image-slider__bg-3 {
+  // background: #000 url('/img/history/03.jpg') center / cover no-repeat;
+}

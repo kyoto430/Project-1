@@ -1,0 +1,696 @@
+//Шрифты
+@font-face {
+  font-family: 'FuturaDemi';
+  src: url('../fonts/FuturaDemi.eot');
+  src: local('☺'), url('../fonts/FuturaDemi.woff') format('woff'),
+    url('../fonts/FuturaDemi.ttf') format('truetype'),
+    url('../fonts/FuturaDemi.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300i,400,700,900&display=swap&subset=cyrillic-ext');
+// //Миксины
+@mixin flexbox() {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  font-size: 0;
+}
+@mixin anim($time, $delay) {
+  -webkit-transition: all $time ease $delay;
+  -o-transition: all $time ease $delay;
+  transition: all $time ease $delay;
+}
+@mixin rotate($deg) {
+  -webkit-transform: rotate($deg);
+  -ms-transform: rotate($deg);
+  -o-transform: rotate($deg);
+  transform: rotate($deg);
+}
+@mixin scale($num) {
+  -webkit-scale: ($num);
+  -moz-scale: ($num);
+  -ms-scale: ($num);
+  -o-scale: ($num);
+  scale: ($num);
+}
+
+@mixin adaptiv-font($pcSize, $mobSize) {
+  $addSize: $pcSize - $mobSize;
+  $maxWidth: $maxWidth - 320;
+  font-size: calc(
+    #{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth})
+  );
+}
+// Шрифт по умолчанию
+$fontfamily: 'Arial';
+
+// Переменные
+$minwidth: 320px;
+$maxWidth: 1280;
+$mw: 1170;
+$md1: $mw + 12;
+$md2: 991.98;
+$md3: 767.98;
+$md4: 479.98;
+
+// Обнуление
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+:focus,
+:active {
+  outline: none;
+}
+a:focus,
+a:active {
+  outline: none;
+}
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+html,
+body {
+  background-color: #000;
+  text-shadow: rgba(0, 0, 0, 0.8) 0px 1px 2px;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  min-width: $minwidth;
+  position: relative;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  font-family: $fontfamily;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  &.lock {
+    overflow: hidden;
+  }
+}
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+input::-ms-clear {
+  display: none;
+}
+button {
+  cursor: pointer;
+}
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+a,
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+ul li {
+  list-style: none;
+}
+img {
+  vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+//Основная сетка
+html {
+  scroll-behavior: smooth;
+}
+
+.container {
+  max-width: $mw + px;
+  margin: 0 auto;
+  width: 100%;
+  //@media (max-width: $md1+px){max-width: 970px;}
+  @media (max-width: $md1+px) {
+    max-width: 750px;
+  }
+  @media (max-width: $md2+px) {
+    max-width: none;
+    padding: 0 10px;
+  }
+}
+
+.content {
+  @media (max-width: $md2+px) {
+    padding-top: 61px;
+  }
+}
+
+//Основной блок
+
+.history {
+  margin: 0px 0px 75px 0px;
+  @media (max-width: $md2+px) {
+    margin: 0px 0px 40px 0px;
+  }
+  @media (max-width: $md4+px) {
+    margin: 0px 0px 25px 0px;
+  }
+}
+.history__column {
+  flex: 1 1 100%;
+  min-width: 0;
+}
+.history__image {
+}
+.history-body {
+  padding: 75px 20px 75px 60px;
+  @media (max-width: $md1+px) {
+    padding: 30px 20px 30px 30px;
+  }
+  @media (max-width: $md4+px) {
+    padding: 15px 10px 15px 15px;
+  }
+}
+.history-body-content {
+  max-width: 500px;
+  padding: 0px 10px 0px 10px;
+  text-align: center;
+}
+.history-body__title {
+  font-family: 'FuturaDemi';
+  font-size: 50px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: #fff;
+  margin: 0px 0px 30px 0px;
+  @media (max-width: $md1+px) {
+    font-size: 35px;
+    margin: 0px 0px 20px 0px;
+  }
+  @media (max-width: $md4+px) {
+    margin: 0px 0px 10px 0px;
+  }
+}
+.history-body__text {
+  height: 120px;
+  font-size: 17px;
+  font-weight: 400;
+  font-style: italic;
+  line-height: 25px;
+  text-align: justify;
+  color: #ebdec2;
+  margin: 0px 0px 50px 0px;
+  padding: 20px;
+  @media (max-width: $md1+px) {
+    margin: 0px 0px 30px 0px;
+  }
+  @media (max-width: $md4+px) {
+    font-size: 14px;
+    height: 180px;
+  }
+}
+.history-body-buttons {
+  @include flexbox();
+  align-items: center;
+  justify-content: center;
+  margin: 0px 0px 25px 0px;
+}
+.history-body-buttons__item {
+}
+.history-body-buttons__link {
+  font-family: 'Roboto';
+  font-size: 15px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  text-decoration: underline;
+  color: #fff;
+  margin: 0px 0px 0px 15px;
+  @media (max-width: $md3+px) {
+  }
+}
+//==========================================================
+.heroes {
+  margin: 0px 0px 40px 0px;
+  @media (max-width: $md2+px) {
+    margin: 0px;
+  }
+}
+.heroes-body {
+  @include flexbox();
+  flex-wrap: wrap;
+  background-color: #000;
+  @media (max-width: $md2+px) {
+  }
+}
+.heroes_column {
+  flex: 0 0 25%;
+  margin: 0px 0px 40px 0px;
+  @media (max-width: $md2+px) {
+    flex: 0 0 50%;
+  }
+  @media (max-width: $md4+px) {
+    flex: 1 1 100%;
+  }
+}
+.heroes-item {
+  @include flexbox();
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+.heroes-item__image {
+  display: block;
+  margin: 0px 0px 25px 0px;
+  @media (max-width: $md4+px) {
+    margin: 0px 0px 15px 0px;
+  }
+}
+.heroes-item__title {
+  height: 50px;
+  overflow: hidden;
+  display: block;
+  max-width: 200px;
+  font-family: 'FuturaDemi';
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 20px;
+  text-align: center;
+  margin: 0px 0px 30px 0px;
+  @media (max-width: $md1+px) {
+    font-size: 18px;
+  }
+  @media (max-width: $md4+px) {
+    max-width: none;
+    height: auto;
+    overflow: visible;
+    margin: 0px 0px 20px 0px;
+  }
+}
+.heroes-item__text {
+  flex: 1 1 auto;
+  max-width: 185px;
+  font-size: 15px;
+  line-height: 25px;
+  color: #ebdec2;
+  text-align: center;
+  margin: 0px 0px 25px 0px;
+  padding: 0px 10px 0px 0px;
+  @media (max-width: $md4+px) {
+    max-width: none;
+    margin: 0px 0px 15px 0px;
+  }
+}
+.heroes-item__btn {
+  margin: 0px 0px 29px 0px;
+}
+.heroes-item__link {
+  font-family: 'Roboto';
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 15px;
+  letter-spacing: 1.5px;
+  text-decoration: underline;
+}
+//==========================================================
+.gallery {
+}
+.gallery-top {
+  @include flexbox();
+  background: #000 url('../img/bg/01.jpg') 35% / cover no-repeat;
+  @media (max-width: $md4+px) {
+    background: #000;
+  }
+}
+.gallery-top__column {
+  flex: 0 0 50%;
+  @media (max-width: $md1+px) {
+    flex: 1 1 100%;
+    &:last-child {
+      display: none;
+    }
+  }
+}
+.gallery-top__text {
+  font-family: 'FuturaDemi';
+  @include adaptiv-font(50, 20);
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: #fff;
+  padding: 90px 60px 90px 0px;
+  text-align: right;
+  @media (max-width: $md1+px) {
+    padding: 60px 0px;
+    text-align: center;
+  }
+  @media (max-width: $md2+px) {
+    padding: 30px 0px;
+  }
+}
+.gallery-top__image {
+}
+.gallery-body {
+  padding: 50px 0px 0px 0px;
+  background-color: #000;
+  @media (max-width: $md4+px) {
+    padding: 30px 0px 0px 0px;
+  }
+}
+.gallery-body-row {
+  @include flexbox();
+  flex-wrap: wrap;
+}
+.gallery-body__column {
+  margin: 0px 0px 10px 0px;
+  flex: 1 1 100%;
+  @media (max-width: $md4+px) {
+  }
+}
+.gallery-body-item {
+  @include flexbox();
+  flex-direction: column;
+  @media (max-width: $md2+px) {
+    // flex-direction: column;
+    width: 80%;
+    margin: 0 auto;
+  }
+  @media (max-width: $md4+px) {
+    width: 100%;
+  }
+}
+
+.gallery-body-item__icon {
+  width: 100%;
+  height: 640px;
+  @media (max-width: $md2+px) {
+    height: 500px;
+  }
+  @media (max-width: $md4+px) {
+    height: 300px;
+    border-radius: 50%;
+  }
+}
+.gallery-body-item-body {
+  flex: 1 1 100%;
+  padding: 0px 10px 0px 10px;
+  @media (max-width: $md4+px) {
+    padding: 0px 0px 0px 0px;
+  }
+}
+.gallery-body-item-body__title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  margin-top: 10px;
+  overflow: hidden;
+  font-family: 'FuturaDemi';
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: #fff;
+  transition: all 0.5s ease;
+  cursor: pointer;
+  position: relative;
+  @include adaptiv-font(25, 16);
+
+  &::after {
+    content: '\25BC';
+    color: lime;
+    text-shadow: 0 0 2px rgb(0, 255, 64), 0 0 10px rgb(255, 255, 255);
+    right: 0;
+    position: absolute;
+  }
+  &.active::after {
+    content: '\25B2';
+    color: crimson;
+    text-shadow: 0 0 2px rgb(163, 0, 0), 0 0 10px rgb(255, 255, 255);
+  }
+}
+
+.gallery-body-item-body__text {
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  overflow: hidden;
+  height: 0;
+  cursor: pointer;
+
+  transition: all 0.5s ease-out;
+  background-color: #111;
+  // box-shadow: 0 0 2px #ffffff, 0 0 10px #fffffe;
+  @include adaptiv-font(16, 14);
+  line-height: 25px;
+  color: #ebdec2;
+  text-align: justify;
+  & > p {
+    padding: 5px 20px;
+    text-indent: 30px;
+    line-height: 26px;
+  }
+  & > p > span {
+    font-weight: bold;
+    color: #fff;
+  }
+  @media (max-width: $md2+px) {
+    & > p {
+      padding: 5px 10px;
+      text-indent: 30px;
+      line-height: 26px;
+      &::before {
+        color: crimson;
+      }
+    }
+  }
+  @media (max-width: $md4+px) {
+    padding: 5px 5px;
+  }
+}
+//=========================================================
+.cinema {
+  // .cinema__items
+
+  &__items {
+    padding: 50px 0px;
+  }
+
+  // .cinema__container
+
+  &__container {
+    max-width: 1200px;
+    padding: 0px 15px;
+    margin: 0 auto;
+  }
+
+  // .cinema__body
+
+  &__body {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  }
+
+  // .cinema__item
+
+  &__item {
+  }
+
+  // .cinema__video
+
+  &__video {
+    position: relative;
+    margin: 0px 0px 15px 0px;
+    // aspect-ratio: 16/9;
+    padding: 0px 0px 56% 0px;
+  }
+
+  &__video video,
+  &__video iframe {
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  // .cinema__text
+
+  &__text {
+    @include adaptiv-font(18, 14);
+    line-height: 25px;
+    text-align: center;
+    color: #fff;
+  }
+}
+//==========================================================
+.contacts {
+  padding: 80px 0px 0px 0px;
+  @media (max-width: $md2+px) {
+    padding: 30px 0px 0px 0px;
+  }
+}
+.contacts__title {
+  @include adaptiv-font(50, 20);
+  overflow: hidden;
+  display: block;
+  font-family: 'FuturaDemi';
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: #fff;
+  margin: 0px 0px 30px 0px;
+  @media (max-width: $md2+px) {
+    text-align: center;
+  }
+}
+
+.contacts-body {
+  @include flexbox();
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  @media (max-width: $md2+px) {
+    align-items: center;
+  }
+}
+.contacts-body__column {
+  flex: 0 0 50%;
+  margin: 0px 0px 20px 0px;
+  @media (max-width: $md2+px) {
+    flex: 1 1 100%;
+  }
+}
+.contacts-body__item {
+  font-size: 15px;
+  color: #ebdec2;
+  display: inline-block;
+  line-height: 27px;
+  padding: 0px 0px 0px 35px;
+}
+.contacts-body__item--1 {
+  background: url('../img/contacts/04.svg') left no-repeat;
+}
+.contacts-body__item--2 {
+  background: url('../img/contacts/05.svg') left no-repeat;
+}
+.contacts-body__item--3 {
+  background: url('../img/contacts/06.svg') left no-repeat;
+}
+.contacts-social {
+  @include flexbox();
+  @media (max-width: $md4+px) {
+    justify-content: space-between;
+  }
+}
+.contacts-social__item {
+  width: 40px;
+  margin: 0px 30px 0px 0px;
+  border-radius: 50%;
+  opacity: 0.7;
+  transition: opacity 0.3s ease 0s;
+  &:hover {
+    opacity: 1;
+  }
+  &:last-child {
+    margin: 0px 0px 0px 0px;
+  }
+  @media (max-width: $md2+px) {
+    opacity: 1;
+  }
+}
+.contacts-content {
+  @include flexbox();
+  @media (max-width: $md2+px) {
+    display: block;
+  }
+}
+.contacts-content__column {
+  flex: 0 0 50%;
+}
+.contacts-content__img {
+  height: 100%;
+  background: #000 url('../img/bg/02.jpg') top/cover no-repeat;
+  @media (max-width: $md2+px) {
+    height: 300px;
+  }
+  @media (max-width: $md4+px) {
+    display: none;
+  }
+}
+.contacts-content-form {
+  padding: 55px 60px;
+  @media (max-width: $md2+px) {
+    padding: 30px;
+  }
+}
+.contacts-content-form__title {
+  overflow: hidden;
+  display: block;
+  font-family: 'FuturaDemi';
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 25px;
+  margin: 0px 0px 30px 0px;
+  @media (max-width: $md2+px) {
+    text-align: center;
+  }
+}
+.contacts-content-form-body {
+  max-width: 375px;
+  @media (max-width: $md2+px) {
+    text-align: center;
+    margin: 0 auto;
+  }
+}
+.contacts-content-form-line {
+  margin: 0px 0px 25px 0px;
+}
+.contacts-content-form-button {
+}
+// .input {
+//   border-radius: 0 !important;
+//   width: 100%;
+//   display: block;
+//   padding: 0px 18px;
+//   height: 50px;
+//   border: 2px solid #959595;
+//   background-color: #252525;
+//   color: #959595;
+//   font-size: 15px;
+// }
+// textarea.input {
+//   resize: none;
+//   height: 100px;
+//   padding: 10px 18px;
+// }
+
+//Подключение файлов
+@import 'header.scss';
+@import 'footer.scss';
+@import 'forms.scss';
+@import 'mixins.scss';
+@import 'slider.scss';
+@import 'popup.scss';

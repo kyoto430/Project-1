@@ -1,0 +1,38 @@
+footer {
+}
+
+.footer-body {
+  @include flexbox();
+  height: 125px;
+  justify-content: space-between;
+  align-items: center;
+  @media (max-width: $md2+px) {
+    height: auto;
+    padding: 15px 0px;
+    flex-direction: column;
+  }
+}
+.footer-body__column {
+  @media (max-width: $md2+px) {
+    &:first-child {
+      order: 2;
+    }
+    &:last-child {
+      order: 1;
+      margin: 0px 0px 15px 0px;
+    }
+  }
+}
+.footer-body__text {
+  color: #ebdec2;
+  font-size: 15px;
+  line-height: 25px;
+  @media (max-width: $md2+px) {
+    text-align: center;
+  }
+}
+.footer__logo {
+  img {
+    width: 64px;
+  }
+}

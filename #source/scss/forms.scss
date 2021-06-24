@@ -1,0 +1,362 @@
+//Buttons
+.btn {
+  display: inline-block;
+  font-family: 'Roboto';
+  font-size: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 50px;
+  letter-spacing: 1.5;
+  color: #000;
+  background-color: rgba(255, 255, 255, 1);
+  height: 50px;
+  padding: 0px 33px;
+  text-shadow: none;
+  transition: all 0.5s ease;
+  text-indent: 0px;
+
+  &:hover {
+    background-color: rgba(248, 183, 0, 0.9);
+    color: #fff;
+  }
+  &.fw {
+    width: 100%;
+  }
+}
+
+.btn-top {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: 400;
+  color: #f8b700;
+  background: rgba(153, 0, 0, 0.3);
+  border-radius: 4px;
+  border: 1px solid black;
+  box-shadow: inset 0 0 1px 1px #ff6600;
+  padding: 7px 20px;
+  transition: all 0.3s linear;
+
+  @media (min-width: $md1+px) {
+    &:hover {
+      color: #ffbf80;
+      background: #ff0000;
+    }
+  }
+  @media (max-width: $md1+px) {
+    background: rgba(153, 0, 0, 0.9);
+  }
+}
+
+.active-lang {
+  color: #000;
+  background-color: yellow;
+  text-shadow: none;
+  opacity: 1;
+}
+
+.left {
+  display: block;
+  margin: 0px auto;
+  border-radius: 50%;
+  float: left;
+  shape-outside: circle(50%);
+  @media (max-width: $md4+px) {
+    float: none;
+  }
+}
+
+.adaptive-img {
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+.ibg {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.ibg img {
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+}
+
+form * {
+  outline: none;
+}
+
+.form {
+  max-width: 550px;
+  margin: 0 auto;
+  color: #fff;
+  padding: 30px 0px;
+
+  // .form__body
+
+  &__body {
+    position: relative;
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(51, 51, 51, 0.9) url(../img/load.gif) center / 50px
+        no-repeat;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.5s ease 0s;
+    }
+    &._sending::after {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  // .form__title
+
+  &__title {
+    @include adaptiv-font(16, 14);
+    font-weight: 700;
+    margin: 0px 0px 30px 0px;
+  }
+
+  // .form__item
+
+  &__item {
+    margin: 0px 0px 20px 0px;
+  }
+
+  // .form__label
+
+  &__label {
+    @include adaptiv-font(18, 14);
+    display: block;
+    margin: 0px 0px 10px 0px;
+  }
+
+  // .form__input
+
+  &__input {
+    height: 50px;
+    padding: 0px 20px;
+    border-radius: 5px;
+    width: 100%;
+    @include adaptiv-font(18, 14);
+    transform: all 0.3s ease 0s;
+  }
+
+  &__input:focus {
+    box-shadow: 0 0 15px lime;
+  }
+
+  &__input._error {
+    box-shadow: 0 0 15px red;
+  }
+
+  textarea.form__input {
+    min-height: 120px;
+    resize: vertical;
+    padding: 20px;
+  }
+  // .form__button
+
+  &__button {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60px;
+    background-color: #7a956b;
+    color: #fff;
+    @include adaptiv-font(18, 14);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    border-radius: 20px;
+    box-shadow: 0 5px 0 #12180c;
+    transition: background-color 0.3s ease 0s;
+    position: relative;
+    top: 0;
+  }
+
+  &__button:hover {
+    background-color: #8fc473;
+  }
+
+  &__button:active {
+    top: 3px;
+    box-shadow: 0 2px 0 #12180c;
+  }
+}
+.options {
+  padding: 10px 0px 0px 0px;
+  // .options__input
+
+  &__item {
+    margin: 0px 0px 10px 0px;
+  }
+
+  &__input {
+    display: none;
+    &:checked + .options__label::after {
+      transform: scale(1);
+    }
+  }
+
+  // .options__label
+
+  &__label {
+    display: inline-flex;
+    @include adaptiv-font(16, 14);
+    line-height: 140%;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+  }
+
+  &__label::before {
+    content: '';
+    align-self: flex-start;
+    flex: 0 0 24px;
+    height: 24px;
+    background-color: #fff;
+    border-radius: 50%;
+    margin: 0px 10px 0px 0px;
+  }
+
+  &__label::after {
+    transition: transform 0.3s ease 0s;
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 16px;
+    height: 16px;
+    background-color: #7a956b;
+    border-radius: 50%;
+    transform: scale(0);
+  }
+}
+
+.select {
+  height: 50px;
+  width: 100%;
+  border-radius: 5px;
+  @include adaptiv-font(18, 14);
+  padding: 0px 20px;
+}
+.file {
+  // .file__item
+
+  &__item {
+    position: relative;
+  }
+
+  // .file__input
+
+  &__input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    font-size: 0;
+    cursor: pointer;
+  }
+
+  // .file__button
+
+  &__button {
+    display: inline-flex;
+    min-height: 40px;
+    border-radius: 30px;
+    justify-content: center;
+    align-items: center;
+    background-color: #77608d;
+    padding: 0px 20px;
+    @include adaptiv-font(16, 14);
+  }
+
+  // .file__preview
+
+  &__preview {
+    display: inline-block;
+    max-width: 150px;
+    padding: 10px 0px 0px 0px;
+  }
+
+  &__preview img {
+    max-width: 100%;
+  }
+}
+.checkbox {
+  &._error .checkbox__label::before {
+    box-shadow: 0 0 15px red;
+  }
+  // .checkbox__input
+
+  &__input {
+    display: none;
+  }
+
+  &__input:checked + .checkbox__label::after {
+    transform: scale(1);
+  }
+
+  // .checkbox__label
+
+  &__label {
+    @include adaptiv-font(16, 14);
+    line-height: 140%;
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+  }
+
+  &__label::before {
+    content: '';
+    align-self: flex-start;
+    flex: 0 0 24px;
+    height: 24px;
+    background-color: #fff;
+    border-radius: 4px;
+    margin: 0px 10px 0px 0px;
+  }
+
+  &__label::after {
+    transition: transform 0.3s ease 0s;
+    content: '';
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    background-color: #7a956b;
+    border-radius: 4px;
+    transform: scale(0);
+  }
+
+  &__label a {
+    color: lawngreen;
+  }
+}
+
+.box--active {
+  opacity: 1;
+  overflow: visible;
+  height: 100%;
+  transition: opacity 1s ease-in;
+}
