@@ -1,38 +1,29 @@
 <!-- Сообщаем браузеру как стоит обрабатывать эту страницу -->
 <!DOCTYPE html>
 <!-- Оболочка документа, указываем язык содержимого -->
-<html lang="en">
+<html lang="ru">
 	<!-- Заголовок страницы, контейнер для других важных данных (не отображается) -->
 	<head>
 		<!-- Заголовок страницы в браузере -->
-		<title>Warcraft</title>
+		<title>Варкрафт</title>
 		<!-- Подключаем CSS -->
 		<link rel="stylesheet" href="css/style.css"/>
+		<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+		<link rel="shortcut icon" href="img/icons/world_of_warcraft_app.ico">
 		<!-- Кодировка страницы -->
 		<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
 		<meta name="format-detection" content="telephone=no">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	</head>
 	<!-- Отображаемое тело страницы -->
 	<body>
-		<div class="wrapper">
+		<div id="top" class="wrapper">
 		<!-- @import "header_eng.kit" -->
 		<div class="content">
 			<div id="historyID" class="history">
 				<div class="history__column">
 					<div class="history__image"></div>
-				</div>
-				<div class="history__column">
-					<div class="history-body">
-						<div class="history-body-content">
-							<div class="history-body__title">Azeroth</div>
-							<div class="history-body__text">Азерот - одна из малых планет в огромной Вселенной, царстве сильной магии и могущественных существ. С начала времен эти силы влияли на Азерот и окружающий его космос, приводя в движение звезды, верша судьбы бесчисленых миров и цивилизаций смертных...</div>
-							<div class="history-body-buttons">
-								<a href="#" class="history-body-buttons__item btn">Подробнее</a>
-								<a href="#" class="history-body-buttons__link">View</a>
-							</div>
-						</div>
-					</div>
+					<!-- @import "slider_eng.kit" -->
 				</div>
 			</div>
 			<div id="heroesID" class="heroes">
@@ -40,110 +31,98 @@
 					<div class="heroes-body">
 						<div class="heroes_column">
 							<div class="heroes-item">
-								<a href="#" class="heroes-item__image"><img src="./img/icons/wow-paladin.png" alt=""></a>
-								<a href="#" class="heroes-item__title">Паладин</a>
+								<a href="#popup_4" class="heroes-item__image popup-link"><img src="img/icons/wow-paladin.png" alt="Паладин"></a>
+								<a href="#popup_4" class="heroes-item__title popup-link">Паладин</a>
 								<div class="heroes-item__text">Паладины добродетельные защитники слабых, неустанные борцы с нежитью и демонами.</div>
-								<p><a href="" class="heroes-item__btn btn">Link</a></p>
-								<p><a href="" class="heroes-item__link">View</a></p>
+								<p><a href="#popup_4" class="heroes-item__btn btn popup-link">Подробнее</a></p>
 							</div>
 						</div>
 						<div class="heroes_column">
 							<div class="heroes-item">
-								<a href="#" class="heroes-item__image"><img src="./img/icons/wow-mage.png" alt=""></a>
-								<a href="#" class="heroes-item__title">Маг</a>
+								<a href="#popup_5" class="heroes-item__image popup-link"><img src="img/icons/wow-mage.png" alt="Маг"></a>
+								<a href="#popup_5" class="heroes-item__title popup-link">Маг</a>
 								<div class="heroes-item__text">Маги Кирин Тора первыми освоили искусство заклинаний, использующих лед и огонь.</div>
-								<p><a href="" class="heroes-item__btn btn">Link</a></p>
-								<p><a href="" class="heroes-item__link">View</a></p>
+								<p><a href="#popup_5" class="heroes-item__btn btn popup-link">Подробнее</a></p>
 							</div>
 						</div>
 						<div class="heroes_column">
 							<div class="heroes-item">
-								<a href="#" class="heroes-item__image"><img src="./img/icons/wow-rogue.png" alt=""></a>
-								<a href="#" class="heroes-item__title">Разбойник</a>
+								<a href="#popup_6" class="heroes-item__image popup-link"><img src="img/icons/wow-rogue.png" alt="Разбойник"></a>
+								<a href="#popup_6" class="heroes-item__title popup-link">Разбойник</a>
 								<div class="heroes-item__text">Разбойники Азерота мастера уловок и хитрые противники каждого, кто не приглядывается к теням, чтобы увидеть, что они скрывают.</div>
-								<p><a href="" class="heroes-item__btn btn">Link</a></p>
-								<p><a href="" class="heroes-item__link">View</a></p>
+								<p><a href="#popup_6" class="heroes-item__btn btn popup-link">Подробнее</a></p>
 							</div>
 						</div>
 						<div class="heroes_column">
 							<div class="heroes-item">
-								<a href="#" class="heroes-item__image"><img src="./img/icons/wow-priest.png" alt=""></a>
-								<a href="#" class="heroes-item__title">Жрец</a>
+								<a href="#popup_7" class="heroes-item__image popup-link"><img src="img/icons/wow-priest.png" alt="Жрец"></a>
+								<a href="#popup_7" class="heroes-item__title popup-link">Жрец</a>
 								<div class="heroes-item__text">Искренняя вера в свою религию заставляет множество жрецов вставать на путь храбрости и героизма.</div>
-								<p><a href="" class="heroes-item__btn btn">Link</a></p>
-								<p><a href="" class="heroes-item__link">View</a></p>
+								<p><a href="#popup_7" class="heroes-item__btn btn popup-link">Подробнее</a></p>
 							</div>
 						</div>
 						<div class="heroes_column">
 							<div class="heroes-item">
-								<a href="#" class="heroes-item__image"><img src="./img/icons/wow-deathknight.png" alt=""></a>
-								<a href="#" class="heroes-item__title">Рыцарь смерти</a>
+								<a href="#popup_8" class="heroes-item__image popup-link"><img src="img/icons/wow-deathknight.png" alt="Рыцарь смерти"></a>
+								<a href="#popup_8" class="heroes-item__title popup-link">Рыцарь смерти</a>
 								<div class="heroes-item__text">Когда Король-лич потерял контроль над рыцарями смерти, его бывшие приспешники пожелали отомстить за весь ужас, сотворенный по его приказу. </div>
-								<p><a href="" class="heroes-item__btn btn">Link</a></p>
-								<p><a href="" class="heroes-item__link">View</a></p>
+								<p><a href="#popup_8" class="heroes-item__btn btn popup-link">Подробнее</a></p>
 							</div>
 						</div>
 						<div class="heroes_column">
 							<div class="heroes-item">
-								<a href="#" class="heroes-item__image"><img src="./img/icons/wow-demonhunter.png" alt=""></a>
-								<a href="#" class="heroes-item__title">Охотник на демонов</a>
+								<a href="#popup_9" class="heroes-item__image popup-link"><img src="img/icons/wow-demonhunter.png" alt="Охотник на демонов"></a>
+								<a href="#popup_9" class="heroes-item__title popup-link">Охотник на демонов</a>
 								<div class="heroes-item__text">Загадочные воины тьмы, которые пообещали сражаться против сил Пылающего Легиона, используя их собственные отвратительные возможности</div>
-								<p><a href="" class="heroes-item__btn btn">Link</a></p>
-								<p><a href="" class="heroes-item__link">View</a></p>
+								<p><a href="#popup_9" class="heroes-item__btn btn popup-link">Подробнее</a></p>
 							</div>
 						</div>
 						<div class="heroes_column">
 							<div class="heroes-item">
-								<a href="#" class="heroes-item__image"><img src="./img/icons/wow-druid.png" alt=""></a>
-								<a href="#" class="heroes-item__title">Друид</a>
+								<a href="#popup_10" class="heroes-item__image popup-link"><img src="img/icons/wow-druid.png" alt="Друид"></a>
+								<a href="#popup_10" class="heroes-item__title popup-link">Друид</a>
 								<div class="heroes-item__text">Первые друиды ночных эльфов считались хранителями всего мира, главным для которых было лечение и сохранность окружающей среды.</div>
-								<p><a href="" class="heroes-item__btn btn">Link</a></p>
-								<p><a href="" class="heroes-item__link">View</a></p>
+								<p><a href="#popup_10" class="heroes-item__btn btn popup-link">Подробнее</a></p>
 							</div>
 						</div>
 						<div class="heroes_column">
 							<div class="heroes-item">
-								<a href="#" class="heroes-item__image"><img src="./img/icons/wow-hunter.png" alt=""></a>
-								<a href="#" class="heroes-item__title">Охотник</a>
+								<a href="#popup_11" class="heroes-item__image popup-link"><img src="img/icons/wow-hunter.png" alt="Охотник"></a>
+								<a href="#popup_11" class="heroes-item__title popup-link">Охотник</a>
 								<div class="heroes-item__text">Исследователи диких лесов и пустошей, обученные навыкам выживания и обращения с луком или ружьем.</div>
-								<p><a href="" class="heroes-item__btn btn">Link</a></p>
-								<p><a href="" class="heroes-item__link">View</a></p>
+								<p><a href="#popup_11" class="heroes-item__btn btn popup-link">Подробнее</a></p>
 							</div>
 						</div>
 						<div class="heroes_column">
 							<div class="heroes-item">
-								<a href="#" class="heroes-item__image"><img src="./img/icons/wow-monk.png" alt=""></a>
-								<a href="#" class="heroes-item__title">Монах</a>
+								<a href="#popup_12" class="heroes-item__image popup-link"><img src="img/icons/wow-monk.png" alt="Монах"></a>
+								<a href="#popup_12" class="heroes-item__title popup-link">Монах</a>
 								<div class="heroes-item__text">Известны всему миру своим аскетизмом и целеустремленностью.</div>
-								<p><a href="" class="heroes-item__btn btn">Link</a></p>
-								<p><a href="" class="heroes-item__link">View</a></p>
+								<p><a href="#popup_12" class="heroes-item__btn btn popup-link">Подробнее</a></p>
 							</div>
 						</div>
 						<div class="heroes_column">
 							<div class="heroes-item">
-								<a href="#" class="heroes-item__image"><img src="./img/icons/wow-shaman.png" alt=""></a>
-								<a href="#" class="heroes-item__title">Шаман</a>
+								<a href="#popup_13" class="heroes-item__image popup-link"><img src="img/icons/wow-shaman.png" alt="Шаман"></a>
+								<a href="#popup_13" class="heroes-item__title popup-link">Шаман</a>
 								<div class="heroes-item__text">Эти одаренные целители способны видеть мир духов и общаться с существами, которых никогда не увидят остальные.</div>
-								<p><a href="" class="heroes-item__btn btn">Link</a></p>
-								<p><a href="" class="heroes-item__link">View</a></p>
+								<p><a href="#popup_13" class="heroes-item__btn btn popup-link">Подробнее</a></p>
 							</div>
 						</div>
 						<div class="heroes_column">
 							<div class="heroes-item">
-								<a href="#" class="heroes-item__image"><img src="./img/icons/wow-warlock.png" alt=""></a>
-								<a href="#" class="heroes-item__title">Чернокнижник</a>
+								<a href="#popup_14" class="heroes-item__image popup-link"><img src="img/icons/wow-warlock.png" alt="Чернокнижник"></a>
+								<a href="#popup_14" class="heroes-item__title popup-link">Чернокнижник</a>
 								<div class="heroes-item__text">Чернокнижники известны как мастера темных искусств, направленных на изучение и применение магии огня или тьмы.</div>
-								<p><a href="" class="heroes-item__btn btn">Link</a></p>
-								<p><a href="" class="heroes-item__link">View</a></p>
+								<p><a href="#popup_14" class="heroes-item__btn btn popup-link">Подробнее</a></p>
 							</div>
 						</div>
 						<div class="heroes_column">
 							<div class="heroes-item">
-								<a href="#" class="heroes-item__image"><img src="./img/icons/wow-warrior.png" alt=""></a>
-								<a href="#" class="heroes-item__title">Воин</a>
+								<a href="#popup_15" class="heroes-item__image popup-link"><img src="img/icons/wow-warrior.png" alt="Воин"></a>
+								<a href="#popup_15" class="heroes-item__title popup-link">Воин</a>
 								<div class="heroes-item__text">Бойцы ближнего боя, достигшие высот в обучении искусству владения оружием.</div>
-								<p><a href="" class="heroes-item__btn btn">Link</a></p>
-								<p><a href="" class="heroes-item__link">View</a></p>
+								<p><a href="#popup_15" class="heroes-item__btn btn popup-link">Подробнее</a></p>
 							</div>
 						</div>
 					</div>
@@ -163,39 +142,159 @@
 						<div class="gallery-body-row">
 							<div class="gallery-body__column">
 								<div class="gallery-body-item">
-									<div class="gallery-body-item__icon"><img src="./img/harbingers-story-of-khadgar-66.jpg" alt=""></div>
+									<div class="gallery-body-item__icon ibg"><img src="img/heroes/Main/01.jpg" alt="Кадгар"></div>
 									<div class="gallery-body-item-body">
-										<div class="gallery-body-item-body__title">Медив</div>
-										<div class="gallery-body-item-body__text">Последний из Хранителей Тирисфаля – ордена древних защитников, наделяемых великой магической силой для защиты Азерота от демонов Пылающего Легиона.</div>
+										<div  class="gallery-body-item-body__title">Кадгар</div>
+										<div class="gallery-body-item-body__text">
+											<p><span>Кадгар (англ. Khadgar)</span> – один из величайших магов современности и во всей истории Азерота. Он был учеником Медива, Стража Тирисфаля, и вместе с Андуином Лотаром убил своего одержимого учителя. Хотя заклинание Медива и состарило его, Кадгар стал героем Альянса, закрыв Темный портал во время Второй войны и возглавив экспедицию, которая направилась на Дренор. Он храбро сражался с Пылающим Легионом и всеми, кто пытался уничтожить его мир. Он сотрудничает с героями Орды, которые заслужили его доверие, чтобы противостоять крупным угрозам. Кадгар состоит в Совете Шести, который правит Кирин-Тором и всем Далараном.
+											</p>
+											<p>Когда Темный портал открылся снова, и из него хлынули полчища Железной Орды, Кадгар возглавил отряд героев, чтобы разрушить портал со стороны альтернативного Дренора. Он активно участвовал в сражениях против Железной Орды, а также противостоянии местному Гул'дану и Совету Теней.
+											</p>
+											<p>Кадгар стал настоящим лидером Даларана и не только добился возвращения Орды в город, но и лично участвовал в многих событиях, которые происходили после начала нового вторжения Пылающего Легиона через Расколотые острова.</p></div>
 									</div>
 								</div>
 							</div>
 							<div class="gallery-body__column">
 								<div class="gallery-body-item">
-									<div class="gallery-body-item__icon"><img src="./img/harbingers-story-of-khadgar-45.jpg" alt=""></div>
-									<div class="gallery-body-item-body">
-										<div class="gallery-body-item-body__title">Кадгар</div>
-										<div class="gallery-body-item-body__text">Один из величайших магов современности и во всей истории Азерота.</div>
-									</div>
-								</div>
-							</div>
-							<div class="gallery-body__column">
-								<div class="gallery-body-item">
-									<div class="gallery-body-item__icon"><img src="./img/sylvana.jpg" alt=""></div>
-									<div class="gallery-body-item-body">
-										<div class="gallery-body-item-body__title">Сильвана</div>
-										<div class="gallery-body-item-body__text">Королева банши – верховный правитель Отрекшихся, одной из самых могущественных групп нежити на Азероте.</div>
-									</div>
-								</div>
-							</div>
-							<div class="gallery-body__column">
-								<div class="gallery-body-item">
-									<div class="gallery-body-item__icon"><img src="./img/anduin.jpg" alt=""></div>
+									<div class="gallery-body-item__icon ibg"><img src="img/heroes/Main/02.jpg" alt="Андуин"></div>
 									<div class="gallery-body-item-body">
 										<div class="gallery-body-item-body__title">Андуин Ринн</div>
-										<div class="gallery-body-item-body__text">Сын Вариана Ринна и его жены Тиффин, король Штормграда. Он был назван в честь двух великих личностей в истории королевства: легендарного Андуина Лотара и своего деда короля Ллейна.</div>
+										<div class="gallery-body-item-body__text"><p><span>Андуин Ллейн Ринн (англ. Anduin Llane Wrynn)</span> – сын Вариана Ринна и его жены Тиффин, король Штормграда. Он был назван в честь двух великих личностей в истории королевства: легендарного Андуина Лотара и своего деда короля Ллейна. Андуин впервые получил корону еще в возрасте десяти лет, когда его отец Вариан вдруг пропал на пути к Терамору. Однако, реальной властью в те времена обладали Лорд Болвар Фордрагон и Леди Катрана Престор, королевские советники. Исчезновение короля Вариана держалось в секрете, и на его возвращение (как оказалось, самозванца) отреагировали с известной долей скептицизма.</p>
+											<p>В отличие от своего отца, известного своей решительностью и резкостью, Андуин является спокойным и любознательным дипломатом, а также ярым последователем Церкви Священного Света. Как и Джайна Праудмур до падения Терамора, Андуин пытается найти мирный способ завершить конфликт между Альянсом и Ордой. Во время своих путешествий Андуин завел множество влиятельных друзей за пределами Альянса, включая Бейна Кровавое Копыто, Августейших Небожителей и Гневиона.</p>
+											</div>
 									</div>
 								</div>
+							</div>
+							<div class="gallery-body__column">
+								<div class="gallery-body-item">
+									<div class="gallery-body-item__icon ibg"><img src="img/heroes/Main/03.jpg" alt="Сильвана"></div>
+									<div class="gallery-body-item-body">
+										<div class="gallery-body-item-body__title">Сильвана Ветрокрылая</div>
+										<div class="gallery-body-item-body__text"><p><span>Леди Сильвана Ветрокрылая (англ. Sylvanas Windrunner)</span>, Королева банши – верховный правитель Отрекшихся, одной из самых могущественных групп нежити на Азероте. При жизни она была предводителем следопытов Луносвета, и её боевому мастерству не было равных. Во время Третьей войны она храбро защищала Кель'Талас от вторжения Плети, ведомой рыцарем смерти Артасом Менетилом. Сильвана была убита в сражении, и Артас, не позволив ей просто уйти, вырвал её душу и превратил в банши – хитрое и мстительное существо, служающее Королю-личу и преисполненное ненавистью.</p>
+
+											<p>Когда контроль Короля-лича над его слугами ослаб, Сильвана получила долгожданную свободу и смогла вернуть своё тело. Пообещав отомстить за своё убийство, она объединила свободную нежить и повела их на войну против Плети. Так появились Отрекшиеся, и Сильвана стала их королевой. В будущем Отрекшиеся стали частью Орды и помогли одержать победу над Королем-личом на северных пустошах Нордскола.</p>
+											
+											<p>Сильвана столкнулась со множеством проблем. Восстание в её рядах привело к гибели многих воинов Орды, и теперь королеве банши не доверяют многие из её союзников. Сильвана начала укреплять свою территорию в Тирисфальских лесах, чтобы создать правильное государство для своего народа. Хотя она и уверяет, что её лояльность к Орде не ослабла, кое-кто не уверен в её истинных намерениях.</p>
+											
+											<p>После падения Артаса Менетила Сильвана узнала, что она тоже проклята и должна будет провести вечность среди тьмы и пыток в загробной жизни. Валь'киры предложили ей своё служение, и Сильвана смогла вернуться в мир живых и будет оставаться в нём настолько долго, как существуют её валь'киры. Зная о судьбе, которая неизбежно постигнет её, Сильвана начала больше ценить Отрекшихся, которые стали защитой от ужасающей тьмы. Сильвана возглавила свой народ в агрессивных нападениях на территории Лордерона, и значительная часть материка Восточных королевств уже находится под её контролем.</p>
+											
+											<p>Сильвана принимала участие в битве на Расколотом берегу, где Альянс и Орда пытались противостоять Пылающему Легиону. Она отдала команду к отступлению, видя, что Вол'джин ранен и что другие вожди почти лишились сил. Хотя из-за поступка Сильваны Орду удалось сохранить в тот день, отступление Орды поставило Альянс в уязвимое положение и, возможно, стало причиной гибели Вариана Ринна. В Оргриммаре Вол'джин, умирающий от отравления Скверной, объявил, что Сильвана станет его преемницей на должности вождя Орды. У погребального костра Вол'джина Сильвана произнесла воинам Орды речь о том, что они должны помочь ей отомстить за гибель прежнего вождя. </p></div>
+									</div>
+								</div>
+							</div>
+							<div class="gallery-body__column">
+								<div class="gallery-body-item">
+									<div class="gallery-body-item__icon ibg"><img src="img/heroes/Main/04.jpg" alt="Тралл"></div>
+									<div class="gallery-body-item-body">
+										<div class="gallery-body-item-body__title">Тралл</div>
+										<div class="gallery-body-item-body__text"><p><span>Тралл, сын Дуротана (англ. Thrall, Son of Durotan)</span> - орк, третий лидер Орды. Он является воплощением доблести, силы и отваги всей расы орков. Именно Тралл вывел свой народ из людских лагерей и открыл ему путь к свободе и процветанию. Теперь, во главе с Траллом, Новая Орда стала одной из самых влиятельных сил в Азероте. Тралл - шаман, который всегда видит глубинную суть стихий, эти видения помогают ему принимать правильные и наиболее подходящие решения в сложных ситуациях. При рождении ему было дано имя Го'эль.</p>
+											<p>При событиях Катаклизма Тралл покинул Оргриммар и оставил вождём Гарроша Адского Крика. </p>
+											</div>
+									</div>
+								</div>
+							</div>
+							<div class="gallery-body__column">
+								<div class="gallery-body-item">
+									<div class="gallery-body-item__icon ibg"><img src="img/heroes/Main/05.jpg" alt="Джайна"></div>
+									<div class="gallery-body-item-body">
+										<div class="gallery-body-item-body__title">Джайна Праудмур</div>
+										<div class="gallery-body-item-body__text"><p><span>Леди Джайна Праудмур (англ. Lady Jaina Proudmoore)</span> – глава магического ордена Кирин-Тора и правительница Даларана. Она является дочерью великого адмирала Даэлина Праудмура и сестрой Дерека Праудмура. В настоящее время Джайна – величайший маг человеческой расы.</p>
+
+											<p>Её обучением занимался верховный маг Антонидас, который тренировал её в качестве своего личного агента. В начале Третьей войны Антонидас отправил Джайну к северным землям Лордерона, чтобы расследовать происходящее там. Джайна отправилась туда вместе со своим другом детства, в которого когда-то была влюблена - принцем Артасом Менетилом. Джайна пыталась понять, была ли создана чума, убивавшая жителей Лордерона, с помощью магии. Она наблюдала за падением Лордерона и, ведомая указаниями таинственного Пророка, отправилась вместе с выжившими к землям Калимдора, западного материка.</p>
+											
+											<p>Джайна поклялась любым способом одержать победу над Пылающим Легионом и его зловещими прислужниками. Объединившись с силами ночных эльфов и даже Орды, Джайна помогла уничтожить Архимонда и изгнать Легион из Азерота. Позже она собрала выживших людей и основала портовый город Терамор на берегу Калимдора, в котором правила в последующие годы и надеялась, что в будущем королевства людей вновь объединятся.</p>
+											
+											<p>Вскоре после падения Смертокрыла Орда по приказу Гарроша Адского Крика начала разрушительную атаку на Терамор и уничтожила город взрывом мана-бомбы, усиленной Радужным Средоточием. Джайне удалось спастить благодаря Ронину, который пожертвовал собой, но все её близкие и подданные погибли. Это событие сильно повляило на характер Джайны, сделав её более воинственной и настроенной против Орды, а также изменило её внешность. Исполняя пророчество Кориалстраза, Джайна заняла место павшего Ронина в качестве лидера Кирин-Тора и главы Совета Шести. </p></div>
+									</div>
+								</div>
+							</div>
+							<div class="gallery-body__column">
+								<div class="gallery-body-item">
+									<div class="gallery-body-item__icon ibg"><img src="img/heroes/Main/06.jpg" alt="Гаррош"></div>
+									<div class="gallery-body-item-body">
+										<div class="gallery-body-item-body__title">Гаррош Адский крик</div>
+										<div class="gallery-body-item-body__text"><p><span>Гаррош Адский Крик (англ. Garrosh Hellscream)</span> — вождь Орды и орочьего клана Песни Войны, сын легендарного героя Грома Адского Крика, освободившего орков от проклятия демонов убийством Маннороха. После нового открытия Темного Портала Гаррош был приглашен в Орду Траллом, который сделал сына своего друга личным советником.</p>
+
+											<p>Перед событиями дополнения "Гнев Короля-Лича" Гаррош инициировал отправку войск Орды в Нордскол, чтобы сразиться с Королем-Личем, и лично возглавил их. После штурма Цитадели Ледяной Короны и смерти Артаса Менетила Гарроша считают победителем войны с Плетью.</p>
+											
+											<p>Гаррош известен своей лютой ненавистью к Альянсу и раз за разом требовал у Тралла начала активных военных действий. Став новым вождем Орды перед событиями Катаклизма, первым делом Гаррош начал укрепления аванпостов Калимдора и развернул военную кампанию против Альянса.</p></div>
+									</div>
+								</div>
+							</div>
+							<div class="gallery-body__column">
+								<div class="gallery-body-item">
+									<div class="gallery-body-item__icon ibg"><img src="img/heroes/Main/07.jpg" alt="Артас"></div>
+									<div class="gallery-body-item-body">
+										<div class="gallery-body-item-body__title">Артас Менетил</div>
+										<div class="gallery-body-item-body__text"><p><span>Артас Менетил (англ. Arthas Menethil)</span> – коронованный принц Лордерона и паладин из ордена Рыцарей Серебряной Длани. Он был сыном короля Теренаса Менетила II и наследником трона. Наставником Артаса был Утер Светоносный. Несмотря на многообещающее начало своего жизненного пути, Артас стал одним из самых могущественных и злобных созданий, которых когда-либо знал Азерот.</p> Получив Ледяную Скорбь, он стал одним из рыцарей смерти Плети и уничтожил Лордерон, Кель'Талас и Даларан с помощью войска нежити. 
+											<p>Артас достиг Ледяного Трона в Нордсколе и слился с Королём-личом. После нескольких лет правления Плетью на северном материке и войны против Альянса и Орды Артас был побеждён в битве Тирионом Фордрингом и его чемпионами Света.</p></div>
+									</div>
+								</div>
+							</div>
+							<div class="gallery-body__column">
+								<div class="gallery-body-item">
+									<div class="gallery-body-item__icon ibg"><img src="img/heroes/Main/08.jpg" alt="Иллидан"></div>
+									<div class="gallery-body-item-body">
+										<div class="gallery-body-item-body__title">Иллидан Ярость бури</div>
+										<div class="gallery-body-item-body__text"><p><span>Иллидан Ярость Бури (англ. Illidan Stormrage)</span> – самопровозглашенный властитель Запределья, который правил этими осколками Дренора из Черного храма. Он был рожден ночным эльфом, но из-за своих поступков стал уникальным гибридом эльфа и демона. Иллидан был влюблен в Тиранду Шелест Ветра, но она выбрала Малфуриона, его брата-близнеца. Когда-то Иллидан был одаренным магом, но со временем его возможности поднялись до невероятных вершин из-за становления охотником на демонов и поглощения энергии из черепа Гул'дана.</p>
+
+											<p>Из-за своего стремления к могуществу и тайной магии Иллидан совершил несколько ужасных поступков против собственного народа и других жителей Азерота, включая помощь Саргерасу во времена Войны Древних и создания второго Источника Вечности. За свои преступления он был назван Предателем и заключен в тюрьму, где провел десять тысяч лет, пока Тиранда не освободила его во время Третьей войны. Майев Песнь Теней, которая на протяжении тысяч лет была тюремщицей Иллидана, пыталась вновь захватить его, но попала в плен сама. В конце концов она объединилась с Акамой, чтобы начать вторжение в Черный храм, и убила Иллидана.</p>
+											
+											<p>Его безжизненное тело было доставлено в Казематы Стражей, где хранилось несколько лет, пока Гул'дан из альтернативной вселенной не попытался похитить его.</p></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="cinemaID" class="cinema">
+				<div class="gallery-top">
+					<div class="gallery-top__column">
+						<div class="gallery-top__text">Видеоролики</div>
+					</div>
+					<div class="gallery-top__column">
+						<div class="gallery-top__image"></div>
+					</div>
+				</div>
+				<div class="cinema__items">
+					<div class="cinema__container">
+						<div class="cinema__body">
+							<div class="cinema__item">
+								<div class="cinema__video">
+									<iframe src="https://www.youtube.com/embed/vlVSJ0AvZe0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+								</div>
+								<div class="cinema__text">Lorem ipsum dolor sit amet.</div>
+							</div>
+							<div class="cinema__item">
+								<div class="cinema__video">
+									<iframe src="https://www.youtube.com/embed/IBHL_-biMrQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+								</div>
+								<div class="cinema__text">Lorem ipsum dolor sit amet.</div>
+							</div>
+							<div class="cinema__item">
+								<div class="cinema__video">
+									<iframe src="https://www.youtube.com/embed/BCr7y4SLhck" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+								</div>
+								<div class="cinema__text">Lorem ipsum dolor sit amet.</div>
+							</div>
+							<div class="cinema__item">
+								<div class="cinema__video">
+									<iframe src="https://www.youtube.com/embed/Wq4Y7ztznKc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+								</div>
+								<div class="cinema__text">Lorem ipsum dolor sit amet.</div>
+							</div>
+							<div class="cinema__item">
+								<div class="cinema__video">
+									<iframe src="https://www.youtube.com/embed/wvYXoyxLv64" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+								</div>
+								<div class="cinema__text">Lorem ipsum dolor sit amet.</div>
+							</div>
+							<div class="cinema__item">
+								<div class="cinema__video">
+									<iframe src="https://www.youtube.com/embed/TLzhlsEFcVQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+								</div>
+								<div class="cinema__text">Lorem ipsum dolor sit amet.</div>
 							</div>
 						</div>
 					</div>
@@ -217,10 +316,10 @@
 							</div>
 							<div class="contacts-body__column">
 								<div class="contacts-social">
-									<a href="" class="contacts-social__item contacts-social__item--1"><img src="./img/icons/social/01.svg" alt=""></a>
-									<a href="" class="contacts-social__item contacts-social__item--2"><img src="./img/icons/social/02.svg" alt=""></a>
-									<a href="" class="contacts-social__item contacts-social__item--3"><img src="./img/icons/social/03.svg" alt=""></a>
-									<a href="" class="contacts-social__item contacts-social__item--4"><img src="./img/icons/social/04.svg" alt=""></a>
+									<a href="#" class="contacts-social__item contacts-social__item--1"><img src="img/icons/social/01.svg" alt="youtube"></a>
+									<a href="#" class="contacts-social__item contacts-social__item--2"><img src="img/icons/social/02.svg" alt="google"></a>
+									<a href="#" class="contacts-social__item contacts-social__item--3"><img src="img/icons/social/03.svg" alt="instagramm"></a>
+									<a href="#" class="contacts-social__item contacts-social__item--4"><img src="img/icons/social/04.svg" alt="twitter"></a>
 								</div>
 							</div>
 						</div>
@@ -233,27 +332,86 @@
 				<div class="contacts-content__column">
 					<div class="contacts-content-form">
 						<div class="contacts-content-form__title">Есть вопрос?</div>
-						<form action="#" class="contacts-content-form-body">
+						<!-- <form action="#" class="contacts-content-form-body">
 							<div class="contacts-content-form-line">
-								<input type="text" autocomplete="off" name="form[]" data-value="" class="input" />
+								<input placeholder="Имя" type="text" autocomplete="off" name="form[]" data-value="" class="input" />
 							</div>
 							<div class="contacts-content-form-line">
-								<input type="text" autocomplete="off" name="form[]" data-value="" class="input" />
+								<input placeholder="Тема" type="text" autocomplete="off" name="form[]" data-value="" class="input" />
 							</div>
 								<div class="contacts-content-form-line">
-									<textarea autocomplete="off" name="form[]" data-value="" class="input"> </textarea>
+									<textarea maxlength="255" placeholder="Введите текст..." autocomplete="off" name="form[]" data-value="" class="input"> </textarea>
 							</div>
 							<div class="contacts-content-form-button">
 								<button type="submit" class="form__btn btn">Отправить</button>
 							</div>
-						</form>
+						</form> -->
+						<div class="form">
+							<form action="#" id="form" class="form__body">
+								<h2 class="form__title">Отправка данных на почту</h2>
+								<div class="form__item">
+									<label for="formName" class="form__label">Имя*:</label>
+									<input id="formName" type="text" name="name" class="form__input">
+								</div>
+								<div class="form__item">
+									<label for="formEmail" class="form__label">E-mail*:</label>
+									<input id="formEmail" type="text" name="email" class="form__input">
+								</div>
+								<div class="form__item">
+									<div class="form__label">Впервые на сайте?</div>
+									<div class="options">
+										<div class="options__item">
+											<input id="formRight" type="radio" value="right" name="hand" class="options__input" checked>
+											<label for="formRight" class="options__label"><span>Да</span></label>
+										</div>
+										<div class="option__item">
+											<input id="formLeft" type="radio" value="left" name="hand" class="options__input">
+											<label for="formLeft" class="options__label"><span>Нет</span></label>
+										</div>
+									</div>
+								</div>
+								<div class="form__item">
+									<label for="formMessage" class="form__label">Сообщение:</label>
+									<textarea name="message" id="formMessage" class="form__input"></textarea>
+								</div>
+								<div class="form__item">
+									<div class="form__label">Возраст:</div>
+									<select name="age" class="select">
+										<option value="от 18 до 25" selected>18-25</option>
+										<option value="от 25 до 45">25-45</option>
+										<option value="от 45">45+</option>
+									</select>
+								</div>
+								<div class="form__item">
+									<div class="form__label">Прикрепить фото</div>
+									<div class="file">
+										<div class="file__item">
+											<input id="formImage" accept=".jpg, .png, .gif" type="file" name="image" class="file__input">
+											<div class="file__button">Выбрать</div>
+										</div>
+										<div id="formPreview" class="file__preview"></div>
+									</div>
+								</div>
+								<div class="form__item">
+									<div class="checkbox">
+										<input id="formAgreement" type="checkbox" name="agreement" class="checkbox__input" checked>
+										<label for="formAgreement" class="checkbox__label">Я согласен на обработку персональных данных</label>
+									</div>
+								</div>
+								<button type="button" class="form__button">Отправить</button>
+							</form>
+						</div>
 					</div>
 				</div>
 				</div>
 		</div>
+		<!-- @import "popup_eng.kit" -->
 		<!-- @import "footer_eng.kit" -->
 		</div>
-		<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+		<!-- jQuery -->
+		<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+		<!-- JS скрипты -->
+		<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 		<script src="./js/script.js"></script>
 	</body>
 </html>

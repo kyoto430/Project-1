@@ -360,3 +360,7 @@ form * {
   height: 100%;
   transition: opacity 1s ease-in;
 }
+
+.__slider > ul {
+  width: 100% !important;
+}

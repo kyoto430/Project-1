@@ -35,6 +35,7 @@
 
   &__content {
     background-color: #222;
+    // box-shadow: 0 0 2px goldenrod, 0 0 10px gold;
     color: #ebdec2;
     max-width: 900px;
     padding: 30px;
@@ -42,6 +43,9 @@
     transition: all 0.8s ease 0s;
     opacity: 0;
     transform: translate(0px, -100%);
+    @media (max-width: $md3+px) {
+      padding: 10px;
+    }
   }
 
   // .popup__close
@@ -62,7 +66,7 @@
     color: #fff;
     text-align: center;
     width: 100%;
-    font-size: 40px;
+    @include adaptiv-font(40, 30);
     margin: 0px 0px 20px 0px;
   }
 
@@ -72,7 +76,7 @@
     display: block;
     flex-direction: row;
     align-items: center;
-    margin: 20px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
     @media (max-width: $md3+px) {
       margin: 5px 0px 0px 0px;
     }
@@ -94,8 +98,9 @@
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
-    width: 100%;
+    width: 40%;
     @media (max-width: $md3+px) {
+      width: 100%;
     }
   }
 
@@ -104,7 +109,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
-    padding: 5px;
+    padding: 2px;
     @media (max-width: $md4+px) {
       padding: 0px;
     }
@@ -128,15 +133,25 @@
 
   &__text-side > ul > li > img {
     width: 64px;
-    margin: 5px;
+    margin: 2px;
+    box-shadow: 0 0 2px green, 0 0 10px forestgreen;
   }
 
   &__text-side > ul > div > li > img {
     width: 64px;
     margin: 4.5px;
+    box-shadow: 0 0 2px green, 0 0 10px forestgreen;
+  }
+
+  &__text-side > ul > li > p > em {
+    display: flex;
+    margin: 10px 0px;
+    color: lawngreen;
   }
 
   &__text-side > ul > li > p > em > img {
     width: 16px;
+    margin-left: 2px;
+    box-shadow: 0 0 2px gold, 0 0 10px goldenrod;
   }
 }

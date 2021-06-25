@@ -1582,6 +1582,10 @@ form * {
   transition: opacity 1s ease-in;
 }
 
+.__slider > ul {
+  width: 100% !important;
+}
+
 .image-slider {
   padding: 30px 0px 70px 0px;
 }
@@ -1659,6 +1663,11 @@ form * {
       -ms-transform: translate(0px, -100%);
           transform: translate(0px, -100%);
 }
+@media (max-width: 767.98px) {
+  .popup__content {
+    padding: 10px;
+  }
+}
 .popup__close {
   position: absolute;
   right: 10px;
@@ -1672,7 +1681,7 @@ form * {
   color: #fff;
   text-align: center;
   width: 100%;
-  font-size: 40px;
+  font-size: calc( 30px + 10 * ((100vw - 320px) / 960) );
   margin: 0px 0px 20px 0px;
 }
 .popup__text {
@@ -1684,7 +1693,7 @@ form * {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 20px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
 }
 @media (max-width: 767.98px) {
   .popup__text {
@@ -1710,7 +1719,12 @@ form * {
           justify-content: flex-start;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  width: 100%;
+  width: 40%;
+}
+@media (max-width: 767.98px) {
+  .popup__text-side > ul {
+    width: 100%;
+  }
 }
 .popup__text-side > ul > li {
   display: -webkit-box;
@@ -1725,7 +1739,7 @@ form * {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 5px;
+  padding: 2px;
 }
 @media (max-width: 479.98px) {
   .popup__text-side > ul > li {
@@ -1761,12 +1775,26 @@ form * {
 }
 .popup__text-side > ul > li > img {
   width: 64px;
-  margin: 5px;
+  margin: 2px;
+  -webkit-box-shadow: 0 0 2px green, 0 0 10px forestgreen;
+          box-shadow: 0 0 2px green, 0 0 10px forestgreen;
 }
 .popup__text-side > ul > div > li > img {
   width: 64px;
   margin: 4.5px;
+  -webkit-box-shadow: 0 0 2px green, 0 0 10px forestgreen;
+          box-shadow: 0 0 2px green, 0 0 10px forestgreen;
+}
+.popup__text-side > ul > li > p > em {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 10px 0px;
+  color: lawngreen;
 }
 .popup__text-side > ul > li > p > em > img {
   width: 16px;
+  margin-left: 2px;
+  -webkit-box-shadow: 0 0 2px gold, 0 0 10px goldenrod;
+          box-shadow: 0 0 2px gold, 0 0 10px goldenrod;
 }
