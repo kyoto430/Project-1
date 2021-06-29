@@ -880,11 +880,11 @@ header {
 }
 
 .header-bottom__column {
-  width: 293px;
+  width: 400px;
 }
 @media (max-width: 1182px) {
   .header-bottom__column {
-    width: 255px;
+    width: 266px;
   }
 }
 @media (max-width: 991.98px) {
@@ -918,9 +918,9 @@ header {
   color: #ebdec2;
   text-transform: uppercase;
   letter-spacing: 1px;
-  -webkit-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+  -webkit-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
 }
 @media (min-width: 1182px) {
   .header-bottom-menu__link {
@@ -928,7 +928,7 @@ header {
   }
   .header-bottom-menu__link:hover {
     opacity: 1;
-    text-shadow: 0px 0px 5px white;
+    text-shadow: 0px 0px 2px white, 0 0 10px goldenrod;
   }
 }
 @media (max-width: 991.98px) {
@@ -936,6 +936,8 @@ header {
     font-size: 30px;
     letter-spacing: 1px;
     font-weight: 700;
+    color: #fff;
+    text-shadow: 0 0 2px #000, 0 0 10px gold;
   }
 }
 
@@ -948,6 +950,18 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+@media (min-width: 1182px) {
+  .header-logo {
+    opacity: 0.7;
+  }
+  .header-logo:hover {
+    opacity: 1;
+    text-shadow: 0px 0px 2px white, 0 0 10px goldenrod;
+  }
 }
 @media (max-width: 991.98px) {
   .header-logo {
@@ -1103,6 +1117,10 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
   position: relative;
   z-index: 2;
 }
