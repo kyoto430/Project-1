@@ -937,7 +937,7 @@ header {
     letter-spacing: 1px;
     font-weight: 700;
     color: #fff;
-    text-shadow: 0 0 2px #000, 0 0 10px gold;
+    text-shadow: 0 0 2px #000, 0 0 5px #111;
   }
 }
 
@@ -1808,7 +1808,7 @@ form * {
   display: -ms-flexbox;
   display: flex;
   margin: 10px 0px;
-  color: lawngreen;
+  color: white;
 }
 .popup__text-side > ul > li > p > em > img {
   width: 16px;
