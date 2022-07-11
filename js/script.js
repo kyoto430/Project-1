@@ -41,12 +41,12 @@ new Swiper('.image-slider', {
   },
   //Навигация
   //Буллеты, текущее положение, прогрессбар
-  pagination: {
-    el: '.swiper-pagination',
-    //Буллеты
-    clickable: true,
-    dynamicBullets: true,
-  },
+  // pagination: {
+  //   el: '.swiper-pagination',
+  //   //Буллеты
+  //   clickable: true,
+  //   dynamicBullets: true,
+  // },
   autoHeight: false,
   loop: true,
 
