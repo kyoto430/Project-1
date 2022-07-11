@@ -1,2 +1,6 @@
-# Project-1
-Warcraft project
+# Responsive Web-site
+
+- HTML
+- CSS
+- SASS
+- JavaScript
