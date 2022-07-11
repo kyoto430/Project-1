@@ -1832,7 +1832,7 @@ form * {
   display: -ms-flexbox;
   display: flex;
   margin: 10px 0px;
-  color: lawngreen;
+  color: white;
 }
 .popup__text-side > ul > li > p > em > img {
   width: 16px;
